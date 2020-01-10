@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elbistan!</title>
+</head>
+
+<body>
+	<script type="text/JavaScript">
+		var linebreak = "<br />";		
+		//kullanicidan degerler aliniyor...
+		var adSoyad = prompt("Adiniz ve Soyadiniz:"); 
+		var yer = prompt("Universite:");
+		var bolum = prompt("Bolumunuz:");
+		var vize = prompt("Vize notunuz:");			
+		var fnal = prompt("Final notunuz:");	
+		var sonuc = (vize * 0.6) + (fnal * 0.4);
+		
+		//ekrana yazdiriliyor...
+		document.write("Adiniz: " + adSoyad);
+		document.write(linebreak);
+		document.write("Universite: " + yer);
+		document.write(linebreak);
+		document.write("Bolumunuz: " + bolum);
+		document.write(linebreak);
+		document.write("Vize: "+vize);
+		document.write(linebreak);
+		document.write("Final: "+fnal);
+		document.write(linebreak);
+		document.write("Ortalama: "+sonuc);
+		document.write(linebreak);
+		
+		if(sonuc > 60 && sonuc <= 65){
+			document.write("CC");
+		}
+		else if(sonuc > 65 && sonuc <= 73){
+			document.write("CB");
+		}
+		else if(sonuc > 73 && sonuc <= 80){
+			document.write("BB");
+		}
+		else if(sonuc > 80 && sonuc <= 87){
+			document.write("BA");
+		}
+		else if(sonuc > 87 && sonuc <= 100){
+			document.write("AA");
+		}
+		else{
+			document.write("FF");
+		}
+	</script>
+</body>
+</html>

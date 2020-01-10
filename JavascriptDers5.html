@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elbistan!</title>
+	<meta charset = "utf-8">
+	<script type="text/JavaScript">
+		var linebreak = "<br />";
+		
+		var tahmin;
+		function sifreAl(sifre){
+			return 1234;
+		}
+		
+		function sifreDogrula(tahmin){
+			tahmin = prompt("Sifre giriniz");
+			var pass = sifreAl()
+			if(tahmin != pass){
+				document.write("Tekrar deneyiniz" +linebreak);
+			}
+			else{
+				document.write("Eşleşme tamam" +linebreak);		
+			}
+		}
+		
+		
+		//2 uygulama alanı burası yukarı ile bağlantısı yoktur.burada araba bilgisine göre sınıflandırma yaptık.	
+		var sonuc;
+		function arabaBilgi(marka,model,yil,fiyat){  
+			sonuc = fiyat;
+			document.write("Marka = " +marka);
+			document.write(linebreak);
+			document.write("Model = " +model);
+			document.write(linebreak);
+			document.write("Yıl = " +yil);
+			document.write(linebreak);
+			document.write("Fiyat = " +fiyat);
+			document.write(linebreak);
+			arabaHesap(sonuc);
+		}
+		
+		function arabaHesap(sonuc){
+			var hesap;
+			if(sonuc < 25000){													//sonuc değerine göre sınıflandırma yapılıyor
+				hesap = "F";
+				arabaDurum(hesap)
+			}
+			else if (sonuc >= 25000 && sonuc < 35000){
+				hesap = "D";
+				arabaDurum(hesap)
+			} 
+			else if (sonuc >= 35000 && sonuc < 55000){
+				hesap = "C";
+				arabaDurum(hesap)
+			} 
+			else if (sonuc >= 55000 && sonuc < 95000){
+				hesap = "B";
+				arabaDurum(hesap)
+			} 
+			else{
+				hesap = "A";
+				arabaDurum(hesap)
+			}
+		}
+		
+		function arabaDurum(hesap){
+			if(hesap == "F") document.write("F sınıfı araba!");					//hesap değerine göre araba sınıfını belirtiyor.
+			else if(hesap == "D") document.write("D sınıfı araba!");
+			else if(hesap == "C") document.write("C sınıfı araba!");
+			else if(hesap == "B") document.write("B sınıfı araba!");
+			else document.write("A sınıfı araba!");
+		}
+	</script>
+</head>
+
+<body>
+	<script type="text/JavaScript">	
+		sifreDogrula(tahmin); 													//sifreAl fonksiyonu cagirildi.
+		
+		var marka = prompt("Marka: ");
+		var model = prompt("Model:");
+		var yil = prompt("Yıl: ");
+		var fiyat = prompt("Fiyat:");
+		arabaBilgi(marka, model, yil, fiyat);									//arabaBilgi fonksiyonu cagirildi.
+	</script>
+</body>
+</html>

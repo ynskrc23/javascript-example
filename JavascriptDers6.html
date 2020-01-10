@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elbistan!</title>
+	<meta charset = "utf-8">
+	<script type="text/JavaScript">
+		var linebreak = "<br />";
+		
+		function selam(){
+			alert("merhaba dunyalilar");
+		}
+		
+		function btn1(){
+			document.write("Button 1 tıklandı!");       		//onclick işlemi için function yazdık
+		}
+		function btn2(){
+			document.write("Button 2 çift tıklandı!");			//doubleclick işlemi için function yazdık
+		}
+		
+		function resim(){
+			alert("He is Twins Software!");						//onmouseover işlemi için function yazdık.
+		}
+		
+		function getir(){
+			// id'si kelime olan text alaninin degerini alalim.
+			var cumle = document.getElementById("kelime").value;
+			document.write(cumle);
+		}
+	</script>
+</head>
+
+<body onload="selam()">
+	<img src="twins1.png" onmouseover="resim()"/>
+	<input type="button" name="b1" value="Button 1 tek tıklama" onclick="btn1()"/>
+	<input type="button" name="b2" value="Button 2 Çift tıklama" ondblclick="btn2()"/>
+	<input type="text" name="kelime" id="kelime" />
+	<input type="button" name="ok" value="Tamam" onclick="getir()"/>
+</body>
+</html>

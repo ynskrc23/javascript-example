@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elbistan!</title>
+</head>
+
+<body>
+	<script type="text/JavaScript">
+		var linebreak = "<br />";
+		
+		var baslangic = prompt("Baslangic ");
+		var bitis = prompt("Bitis ");
+		baslangic = parseInt(baslangic);
+		bitis = parseInt(bitis);
+		document.write("Baslangic = " +baslangic +linebreak +"Bitis = " +bitis +linebreak);
+		while(baslangic <= bitis){
+			if(baslangic % 3 == 0){
+				if(baslangic % 5 == 0){
+					document.write(baslangic + ", ");
+				}
+			}
+			baslangic++;
+		}
+		
+		document.write(linebreak);
+		
+		var i = 1;												//do while kullanımı
+		do{
+			document.write("hacettepe-bilgisayar" + linebreak);
+			i++;
+		}while(i <= 10);
+		
+		document.write(linebreak);
+		
+		for(var m = 1; m <= 10; m++){							//continue kullanımı
+			if((m % 3) == 0) continue;
+			document.write(m + ", ");
+		}
+	</script>
+</body>
+</html>

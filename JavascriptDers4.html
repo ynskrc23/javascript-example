@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Elbistan!</title>
+	<meta charset = "utf-8">
+</head>
+
+<body>
+	<script type="text/JavaScript">
+		var linebreak = "<br />";
+		
+		var dizi_sayi = new Array(73, 46, 52, 61, 19, 88, 12, 27, 21, 79);
+		var dizi = ["Ankara", "Istanbul", "Elbistan", "Paris", "Londra", "Madrid"];
+		document.write("Şehirlerimiz = ");
+		for(var i = 0; i < dizi.length; i++){										//length dizi boyutunu bulur.
+			document.write(dizi[i] + " , ");
+		}
+		
+		document.write(linebreak); document.write(linebreak);						//bosluk
+		
+		document.write("Ters Siralama = ");
+		dizi.reverse();																//reverse diziyi tersten sıralar.			
+		for(var i = 0; i < dizi.length; i++){
+			document.write(dizi[i] + " , ");
+		}
+		
+		document.write(linebreak); document.write(linebreak);						//bosluk
+		
+		document.write("Kucukten Buyuge Siralama = ");
+		dizi_sayi.sort();															//sort diziyi küçükten büyüge sıralar.			
+		for(var i = 0; i < dizi_sayi.length; i++){
+			document.write(dizi_sayi[i] + " , ");
+		}
+		
+		document.write(linebreak); document.write(linebreak);						//bosluk
+		
+		document.write("Diziyi 1 basamak sola kaydirma = ");
+		dizi_sayi.shift();															//shift diziyi 1 basamak sola kaydırır.			
+		for(var i = 0; i < dizi_sayi.length; i++){
+			document.write(dizi_sayi[i] + " , ");
+		}
+		
+		document.write(linebreak); document.write(linebreak);						//bosluk
+		
+		document.write("Istenilen Aralik = ");
+		alinan_deger = dizi_sayi.slice(2,6);										//slice diziden istenilen aralıkta eleman alır
+		document.write(alinan_deger);
+
+		document.write(linebreak); document.write(linebreak);						//bosluk
+		
+		document.write("Aranan Deger" + linebreak);
+		aranan_deger = dizi_sayi.hasOwnProperty(6);									//hasOwnProperty belirtilen x değerini dizi içerisinde arar varsa true yoksa false  																			 
+		document.write(aranan_deger + linebreak);
+		
+		document.write(linebreak);													//bosluk
+		
+		document.write("Dizinin ilk Hali = ");
+		for(var i = 0; i < dizi_sayi.length; i++){
+			document.write(dizi_sayi[i] + " , ");
+		}
+		document.write(linebreak);
+		document.write("Dizinin Son Hali = ");
+		dizi_sayi.push(135);														//push belirtilen x değerini dizi içerisine ekler 
+		dizi_sayi.push(82);												 																			 
+		for(var i = 0; i < dizi_sayi.length; i++){
+			document.write(dizi_sayi[i] + " , ");
+		}	
+		
+		document.write(linebreak);  document.write(linebreak);						//bosluk
+		
+		document.write("Dizinin ilk Hali = ");
+		for(var i = 0; i < dizi_sayi.length; i++){
+			document.write(dizi_sayi[i] + " , ");
+		}	
+		document.write(linebreak);	
+		document.write("Dizinin Son Hali = ");
+		var d1 = dizi_sayi.pop();													//pop belirtilen x sayısı kadar eleman cıkarır. 											 																			 
+		var d2 = dizi_sayi.pop();
+		var d3 = dizi_sayi.pop();
+		var d4 = dizi_sayi.pop();
+		for(var i = 0; i < dizi_sayi.length; i++){
+			document.write(dizi_sayi[i] + " , ");
+		}
+		document.write(linebreak);
+		document.write("Koparilan degerler = " + d1 + ", " + d2 + ", " + d3 + ", " + d4);	
+	</script>
+</body>
+</html>
